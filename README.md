@@ -1,240 +1,155 @@
-TechVault Management System
-Overview
+# 🗄️ TechVault Inventory System
 
-TechVault Management is a C# Windows Forms Inventory Management System connected to a MySQL database using:
+> A Windows Forms desktop application for managing tech product inventory, built with C# and MySQL.
+> 
+---
 
-C#
-Windows Forms
-MySQL
-XAMPP
-MySqlConnector
+## 📌 Project Description
 
-The system has:
+**TechVault Inventory System** is a desktop-based inventory management application designed for tech product stores. It allows two types of users — **Admin** and **Customer** — to interact with a product database. Admins can add and manage products, while customers can browse and search available items.
 
-Admin Dashboard
-Customer Dashboard
-Product Inventory
-Search Function
-MySQL Database Integration
+The system is built using **C# Windows Forms (.NET)** for the front-end interface and **MySQL** as the back-end database, making it a lightweight yet functional solution for small-to-medium tech retail businesses.
 
-Features
-Admin Dashboard
-Add products
-View products
-Search products
-Inventory management
-Customer Dashboard
-View products
-Search products
+---
 
+## 📐 UML Class Diagram
 
-Requirements
+![UML Diagram](images/uml.png)
 
-Install these before running the project:
+---
 
-Software Needed
+## ⚙️ Features and Functionalities
 
+### 👤 Admin
 
-Software	  Purpose
-Visual Studio	  C# Development
-XAMPP	          MySQL Database
-.NET Framework	  Windows Forms
-MySqlConnector	  MySQL Connection
+| Feature | Description |
+|---|---|
+| **Add Product** | Input product code, name, category, quantity, and unit price to add a new item to the database. Total price is automatically calculated. |
+| **View All Products** | Displays all inventory items in a data grid upon login. |
+| **Search Products** | Real-time search by product name, category, or product code. |
+| **Clear Fields** | Resets all input fields after adding a product. |
 
+### 🧑‍💼 Customer
 
-Installing XAMPP
-Step 1 — Download XAMPP
+| Feature | Description |
+|---|---|
+| **Browse Products** | View all available products in the inventory. |
+| **Search Products** | Search items by name, category, or product code in real time. |
 
-Download from:
+---
 
-XAMPP Official Website
+## 🔄 How the Program Works
 
-Install XAMPP normally.
+1. **Application Start** — `Program.cs` launches the `LoginForm` as the entry point.
 
-Step 2 — Start MySQL
+2. **Login**
+   - The user selects their role from the dropdown.
+   - Choosing **Admin** opens the `AdminDashboard`.
+   - Choosing **Customer** opens the `CustomerDashboard`.
 
-Open XAMPP Control Panel.
+3. **Admin Dashboard**
+   - Displays all products from the database.
+   - Allows adding new products.
+   - Supports real-time searching.
 
-Start:
+4. **Customer Dashboard**
+   - Displays product inventory in read-only mode.
+   - Supports real-time product searching.
 
-Apache
-MySQL
+5. **Database Connection**
+   - `DBConnection.cs` manages the connection to MySQL.
+   - Uses `MySqlConnector` package.
 
-MySQL must be running before opening the project.
+6. **Product Model**
+   - `Product.cs` defines the product structure and properties.
 
-Creating the Database
-Step 1 — Open phpMyAdmin
+---
 
-Open:
+## 🚀 How to Run the Application
 
-phpMyAdmin
+### 📌 Prerequisites
 
-Step 2 — Create Database
+- Visual Studio 2022 or later
+- .NET 6.0 SDK or later
+- MySQL Server
+- MySqlConnector NuGet Package
 
-Click:
+---
 
-New
+### 🗃️ Database Setup
 
-Database name:
+Run the following SQL script:
 
-techvaultdb
+```sql
+CREATE DATABASE techvaultdb;
 
-Click:
-
-Create
-
-Step 3 — Create Products Table
-
-Click the database:
-
-techvaultdb
-
-Open SQL tab and run:
+USE techvaultdb;
 
 CREATE TABLE products (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     product_code VARCHAR(50),
     product_name VARCHAR(100),
-    category VARCHAR(100),
+    category VARCHAR(50),
     quantity INT,
     unit_price DECIMAL(10,2),
     total_price DECIMAL(10,2),
-    date_added DATE
+    date_added DATETIME
 );
+```
 
+---
 
-Installing MySqlConnector Package
-Step 1 — Open Visual Studio
+### ▶️ Running the Application
 
-Open the project.
+1. Clone or download the repository.
+2. Open `TechVault Inventory.slnx` in Visual Studio.
+3. Restore NuGet packages.
+4. Make sure MySQL Server is running.
+5. Configure the database connection inside `DBConnection.cs`.
+6. Press `F5` or click `Start`.
 
-Step 2 — Open Package Manager Console
+---
 
-Go to:
+## 🖼️ System Preview
 
-Tools
-→ NuGet Package Manager
-→ Package Manager Console
-Step 3 — Install Package
+### 🔐 Login Form
 
-Run:
+![Login Form](images/loginform.png)
 
-Install-Package MySqlConnector
+---
 
-Wait until installation finishes.
+### 📦 Admin Dashboard
 
+![Admin Dashboard](images/admindashboard.png)
 
-Database Connection
-DBConnection.cs
-string conn =
-"server=localhost;user=root;password=;database=techvaultdb;";
+---
 
+### 🛒 Customer Dashboard
 
-Project Structure
-TechVaultManagement
-│
-├── Program.cs
-├── DBConnection.cs
-├── Product.cs
-│
-├── LoginForm.cs
-├── LoginForm.Designer.cs
-│
-├── AdminDashboard.cs
-├── AdminDashboard.Designer.cs
-│
-├── CustomerDashboard.cs
-└── CustomerDashboard.Designer.cs
+![Customer Dashboard](images/customerdashboard.png)
 
+---
 
-Running the Project
-Step 1
+## 👨‍💻 Developers
 
-Start XAMPP MySQL.
+| Name | Role |
+|---|---|
+| **Zyra** | Developer |
+| **Tremonti** | Developer |
+| **Renz** | Developer |
 
-Step 2
+---
 
-Open Visual Studio.
+## 🛠️ Built With
 
-Step 3
+- C#
+- Windows Forms
+- .NET
+- MySQL
+- Visual Studio 2022
 
-Build the project:
+---
 
-Ctrl + Shift + B
-
-Step 4
-
-Run the project:
-
-F5
-
-Login Instructions
-
-Select user type:
-
-Admin
-Customer
-
-Click:
-
-LOGIN
-
-Search Function
-
-The search bar can search by:
-
-Product Name
-Category
-Product Code
-
-Search updates automatically while typing.
-
-Common Errors Fix
-Error: dataGridView1 does not exist
-
-Add this inside .Designer.cs:
-
-private System.Windows.Forms.DataGridView dataGridView1;
-Error: InitializeComponent() does not exist
-
-Right click form:
-
-View Designer
-
-Save and rebuild solution.
-
-Error: MySQL connection failed
-
-Check:
-
-XAMPP MySQL is running
-Database name is correct
-MySqlConnector package installed
-Future Improvements
-
-Possible upgrades:
-
-Update products
-Delete products
-User authentication
-Reports
-Charts
-Inventory analytics
-Dark mode
-Export to Excel/PDF
-Role management
-Developer Notes
-
-This project is intended for:
-
-School projects
-Inventory management practice
-C# Windows Forms learning
-MySQL database integration learning
-Technologies Used
-C#
-Windows Forms
-MySQL
-XAMPP
-MySqlConnector
-.NET Framework
+<p align="center">
+Built with ❤️ using C# and MySQL
+</p>
