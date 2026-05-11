@@ -72,8 +72,7 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ### 📌 Prerequisites
 
-- Visual Studio 2022 or later
-- .NET 6.0 SDK or later
+- Visual Studio 2026
 - MySQL Server
 - MySqlConnector NuGet Package
 
@@ -111,25 +110,7 @@ CREATE TABLE products (
 5. Configure the database connection inside `DBConnection.cs`.
 6. Press `F5` or click `Start`.
 
----
 
-## 🖼️ System Preview
-
-### 🔐 Login Form
-
-![Login Form](images/loginform.png)
-
----
-
-### 📦 Admin Dashboard
-
-![Admin Dashboard](images/admindashboard.png)
-
----
-
-### 🛒 Customer Dashboard
-
-![Customer Dashboard](images/customerdashboard.png)
 
 ---
 
@@ -149,7 +130,7 @@ CREATE TABLE products (
 - Windows Forms
 - .NET
 - MySQL
-- Visual Studio 2022
+- Visual Studio 2026
 
 ---
 
