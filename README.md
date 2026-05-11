@@ -1,10 +1,10 @@
-# 🗄️ TechVault Inventory System
+#  TechVault Inventory System
 
 > A Windows Forms desktop application for managing tech product inventory, built with C# and MySQL.
 > 
 ---
 
-## 📌 Project Description
+##  Project Description
 
 **TechVault Inventory System** is a desktop-based inventory management application designed for tech product stores. It allows two types of users — **Admin** and **Customer** — to interact with a product database. Admins can add and manage products, while customers can browse and search available items.
 
@@ -12,7 +12,7 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ---
 
-## 📐 UML Class Diagram
+##  UML Class Diagram
 
 ![UML Diagram][images/uml.png](https://github.com/tremonts/TechVault-Inventory/blob/4d0c63707efd81793931676ce65c4a81ff71dda7/uml_class_diagram.png)
 
@@ -21,9 +21,9 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ---
 
-## ⚙️ Features and Functionalities
+##  Features and Functionalities
 
-### 👤 Admin
+###  Admin
 
 | Feature | Description |
 |---|---|
@@ -32,7 +32,7 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 | **Search Products** | Real-time search by product name, category, or product code. |
 | **Clear Fields** | Resets all input fields after adding a product. |
 
-### 🧑‍💼 Customer
+###  Customer
 
 | Feature | Description |
 |---|---|
@@ -41,7 +41,7 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ---
 
-## 🔄 How the Program Works
+##  How the Program Works
 
 1. **Application Start** — `Program.cs` launches the `LoginForm` as the entry point.
 
@@ -68,9 +68,9 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ---
 
-## 🚀 How to Run the Application
+##  How to Run the Application
 
-### 📌 Prerequisites
+###  Prerequisites
 
 - Visual Studio 2026
 - MySQL Server
@@ -78,7 +78,7 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ---
 
-### 🗃️ Database Setup
+###  Database Setup
 
 Run the following SQL script:
 
@@ -101,7 +101,7 @@ CREATE TABLE products (
 
 ---
 
-### ▶️ Running the Application
+###  Running the Application
 
 1. Clone or download the repository.
 2. Open `TechVault Inventory.slnx` in Visual Studio.
@@ -114,17 +114,17 @@ CREATE TABLE products (
 
 ---
 
-## 👨‍💻 Developers
+##  Developers
 
 | Name | Role |
 |---|---|
-| **Zyra** | Developer |
-| **Tremonti** | Developer |
-| **Renz** | Developer |
+| **Zyra Ballesteros** | Developer |
+| **Tremonti Canatuan** | Developer |
+| **Renz Mariz Carilo** | Developer |
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 - C#
 - Windows Forms
