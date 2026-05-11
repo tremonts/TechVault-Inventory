@@ -14,7 +14,7 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ## 📐 UML Class Diagram
 
-![UML Diagram](images/uml.png)
+![UML Diagram]([images/uml.png](https://github.com/tremonts/TechVault-Inventory/blob/4d0c63707efd81793931676ce65c4a81ff71dda7/uml_class_diagram.png))
 
 ---
 
