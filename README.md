@@ -65,6 +65,20 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 6. **Product Model**
    - `Product.cs` defines the product structure and properties.
 
+
+##OOP Principles
+
+1. Encapsulation
+Encapsulation is implemented through the Product class, which bundles all product-related data into a single, organized unit. All attributes such as ProductCode, ProductName, Category, Quantity, UnitPrice, TotalPrice, and DateAdded are defined as properties with controlled access. External classes cannot directly manipulate the data — they interact with it only through the class structure, protecting the integrity of inventory records.
+
+2. Inheritance
+Inheritance is demonstrated through the form classes of the system. LoginForm, AdminDashboard, and CustomerDashboard all inherit from the Form base class provided by the Windows Forms framework. This allows each form to reuse built-in GUI behavior such as rendering, event handling, and window management without rewriting those features from scratch. Each child class extends the base Form class with its own specific controls and logic, demonstrating a clear parent-child class hierarchy.
+
+3. Polymorphism
+Polymorphism is applied through the search functionality. Both AdminDashboard and CustomerDashboard implement a search method, but each behaves differently based on the user's role. The Admin version searches across all inventory fields with full data access, while the Customer version operates in a read-only context. The same operation — searching products — produces different behavior depending on which class executes it.
+
+4. Abstraction
+Abstraction is achieved through the DBConnection class, which hides the complexity of establishing a MySQL database connection. Other classes in the system such as AdminDashboard and CustomerDashboard do not need to know how the connection is built internally. They simply call GetConnection() and receive a ready-to-use connection object, simplifying database interaction across the entire system.
 ---
 
 ##  How to Run the Application
