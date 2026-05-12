@@ -16,7 +16,7 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 
 ![UML Diagram][images/uml.png](https://github.com/tremonts/TechVault-Inventory/blob/4d0c63707efd81793931676ce65c4a81ff71dda7/uml_class_diagram.png)
 
-![Alt text](https://github.com/tremonts/TechVault-Inventory/blob/4d0c63707efd81793931676ce65c4a81ff71dda7/uml_class_diagram.png)
+![Alt text](https://github.com/tremonts/TechVault-Inventory/blob/812d42a4d2320ad077689162384a496da5cc54a7/uml.png)
 
 
 ---
