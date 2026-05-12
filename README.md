@@ -30,7 +30,6 @@ The system is built using **C# Windows Forms (.NET)** for the front-end interfac
 | **Add Product** | Input product code, name, category, quantity, and unit price to add a new item to the database. Total price is automatically calculated. |
 | **View All Products** | Displays all inventory items in a data grid upon login. |
 | **Search Products** | Real-time search by product name, category, or product code. |
-| **Clear Fields** | Resets all input fields after adding a product. |
 
 ###  Customer
 
